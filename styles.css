@@ -1,0 +1,57 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.parent{
+    background-color: #ddd;
+    width: 77vw;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    /* align items by default is set to stretch */
+    /* align-items: flex-start; */
+    /* align-content: flex-start; */
+}
+
+.child{
+    background-color: skyblue;
+    /* it will stretch to the height of the parent container by default */
+    /* height: 100px; */
+    /* those childs in side responsive container gonna be malleable */
+    /* even the width is fixed */
+    /* width: 100px; */
+    /* flex-basis override width property */
+    /* flex-basis by default is auto  enough to accomdate the content*/
+    /* flex-basis is contrained by max-width and min-width */
+    /* flex-basis: 200px; */
+    /* additional basis would be filled up with flex-grow */
+    /* flex grow by default is 0 */
+    flex-grow: 1;
+    /*  */
+    border: 1px solid #000;
+}
+
+/* .child:nth-of-type(3) {
+    /* align self override align item */
+    /* align-self: stretch; */
+/* } */
+
+/* .child:nth-of-type(2) {
+    /* by default the order is 0 */
+    /* order: -1; */
+/* } */
+
+.child:nth-of-type(4) {
+    /* by default the order is 0 */
+    /* flex-grow: 1; */
+
+    /* flex shrink by default is 1 all childs shrink equally */
+    /* flex-shrink: ; */
+}
+
